@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Admin Ticket Dashboard</h1>
+
+    {% for ticket in tickets %}
+
+    <div class="ticket">
+
+        <h3>Ticket #{{ ticket[0] }}</h3>
+
+        <p><b>User:</b> {{ ticket[1] }}</p>
+
+        <p><b>Category:</b> {{ ticket[2] }}</p>
+
+        <p><b>Description:</b> {{ ticket[3] }}</p>
+
+        <p><b>Status:</b> {{ ticket[4] }}</p>
+
+        <form action="/update/{{ ticket[0] }}" method="POST">
+
+            <select name="status">
+
+                <option>Open</option>
+                <option>In Progress</option>
+                <option>Resolved</option>
+
+            </select>
+
+            <button type="submit">Update</button>
+
+        </form>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

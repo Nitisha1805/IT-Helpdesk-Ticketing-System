@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IT Helpdesk</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>IT Helpdesk Ticket System</h1>
+
+        <form action="/submit" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <select name="issue_type">
+
+                <option>Hardware</option>
+                <option>Software</option>
+                <option>Network</option>
+
+            </select>
+
+            <textarea name="description"
+            placeholder="Describe your issue"
+            required></textarea>
+
+            <button type="submit">Submit Ticket</button>
+
+        </form>
+
+        <a href="/admin">Go to Admin Panel</a>
+
+    </div>
+
+</body>
+</html>
