@@ -24,12 +24,10 @@ This project is an Automated IT Helpdesk Ticketing System built using Python, Fl
 IT-Helpdesk-System/
 │── app.py
 │── tickets.db
-│── requirements.txt
 │── README.md
 │── templates/
 │    ├── index.html
-│    ├── create_ticket.html
-│    ├── admin_dashboard.html
+│    ├── admin.html
 │── static/
 ```
 
